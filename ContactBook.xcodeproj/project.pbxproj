@@ -12,6 +12,23 @@
 		5733DDE428181C6C00287B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5733DDE328181C6C00287B39 /* Assets.xcassets */; };
 		5733DDE728181C6C00287B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5733DDE528181C6C00287B39 /* LaunchScreen.storyboard */; };
 		5733DDEF28181F7900287B39 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DDEE28181F7900287B39 /* BaseController.swift */; };
+		5733DDF12818216C00287B39 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DDF02818216C00287B39 /* BaseView.swift */; };
+		5733DDFF2818235000287B39 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DDFE2818235000287B39 /* MenuView.swift */; };
+		5733DE022818241A00287B39 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE012818241A00287B39 /* StringExtension.swift */; };
+		5733DE042818244C00287B39 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE032818244C00287B39 /* String+Localized.swift */; };
+		5733DE082818267100287B39 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE072818267100287B39 /* ContactsController.swift */; };
+		5733DE0A2818269F00287B39 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE092818269F00287B39 /* ContactsView.swift */; };
+		5733DE0C281827A800287B39 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE0B281827A800287B39 /* ContactController.swift */; };
+		5733DE0E281827B200287B39 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE0D281827B200287B39 /* ContactView.swift */; };
+		5733DE10281829B500287B39 /* BaseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE0F281829B500287B39 /* BaseInputView.swift */; };
+		5733DE1328182D7900287B39 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE1228182D7900287B39 /* NameCell.swift */; };
+		5733DE16281833F500287B39 /* ContactBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE14281833F500287B39 /* ContactBook.xcdatamodeld */; };
+		5733DE19281834AE00287B39 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE18281834AE00287B39 /* Contact.swift */; };
+		5733DE1B2818351300287B39 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE1A2818351300287B39 /* CoreDataManager.swift */; };
+		5733DE1D2818369D00287B39 /* PhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE1C2818369D00287B39 /* PhoneCell.swift */; };
+		5733DE1F281836EB00287B39 /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE1E281836EB00287B39 /* EmailCell.swift */; };
+		5733DE212818373100287B39 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE202818373100287B39 /* AddressCell.swift */; };
+		5733DE232818379200287B39 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733DE222818379200287B39 /* NotesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +39,23 @@
 		5733DDE628181C6C00287B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5733DDE828181C6C00287B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5733DDEE28181F7900287B39 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		5733DDF02818216C00287B39 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		5733DDFE2818235000287B39 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		5733DE012818241A00287B39 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5733DE032818244C00287B39 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		5733DE072818267100287B39 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		5733DE092818269F00287B39 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		5733DE0B281827A800287B39 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		5733DE0D281827B200287B39 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		5733DE0F281829B500287B39 /* BaseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputView.swift; sourceTree = "<group>"; };
+		5733DE1228182D7900287B39 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
+		5733DE15281833F500287B39 /* ContactBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactBook.xcdatamodel; sourceTree = "<group>"; };
+		5733DE18281834AE00287B39 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5733DE1A2818351300287B39 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5733DE1C2818369D00287B39 /* PhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCell.swift; sourceTree = "<group>"; };
+		5733DE1E281836EB00287B39 /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
+		5733DE202818373100287B39 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		5733DE222818379200287B39 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +88,151 @@
 		5733DDD928181C6900287B39 /* ContactBook */ = {
 			isa = PBXGroup;
 			children = (
+				5733DDF2281821DC00287B39 /* Application */,
+				5733DDFC2818229700287B39 /* Assets */,
+				5733DDF3281821F100287B39 /* Helpers */,
+				5733DE172818349200287B39 /* Models */,
+				5733DDFD281822A500287B39 /* Supporting Files */,
 				5733DDDA28181C6900287B39 /* AppDelegate.swift */,
-				5733DDEE28181F7900287B39 /* BaseController.swift */,
-				5733DDDE28181C6900287B39 /* MenuController.swift */,
-				5733DDE328181C6C00287B39 /* Assets.xcassets */,
-				5733DDE528181C6C00287B39 /* LaunchScreen.storyboard */,
-				5733DDE828181C6C00287B39 /* Info.plist */,
+				5733DE1A2818351300287B39 /* CoreDataManager.swift */,
+				5733DE14281833F500287B39 /* ContactBook.xcdatamodeld */,
 			);
 			path = ContactBook;
+			sourceTree = "<group>";
+		};
+		5733DDF2281821DC00287B39 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE052818265500287B39 /* Contacts */,
+				5733DDFB2818226400287B39 /* LaunchScreen */,
+				5733DDF82818223300287B39 /* Menu */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5733DDF3281821F100287B39 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDF4281821F500287B39 /* Common */,
+				5733DE00281823FC00287B39 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5733DDF4281821F500287B39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDF5281821FE00287B39 /* View */,
+				5733DDF62818220100287B39 /* ViewController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5733DDF5281821FE00287B39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE0F281829B500287B39 /* BaseInputView.swift */,
+				5733DDF02818216C00287B39 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5733DDF62818220100287B39 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDEE28181F7900287B39 /* BaseController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5733DDF82818223300287B39 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDFA2818225300287B39 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		5733DDFA2818225300287B39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDDE28181C6900287B39 /* MenuController.swift */,
+				5733DDFE2818235000287B39 /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5733DDFB2818226400287B39 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDE528181C6C00287B39 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		5733DDFC2818229700287B39 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDE328181C6C00287B39 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5733DDFD281822A500287B39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5733DDE828181C6C00287B39 /* Info.plist */,
+				5733DE032818244C00287B39 /* String+Localized.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5733DE00281823FC00287B39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE012818241A00287B39 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5733DE052818265500287B39 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE1128182CA400287B39 /* Cell */,
+				5733DE062818266600287B39 /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		5733DE062818266600287B39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE0B281827A800287B39 /* ContactController.swift */,
+				5733DE072818267100287B39 /* ContactsController.swift */,
+				5733DE0D281827B200287B39 /* ContactView.swift */,
+				5733DE092818269F00287B39 /* ContactsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5733DE1128182CA400287B39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE202818373100287B39 /* AddressCell.swift */,
+				5733DE1E281836EB00287B39 /* EmailCell.swift */,
+				5733DE1228182D7900287B39 /* NameCell.swift */,
+				5733DE222818379200287B39 /* NotesCell.swift */,
+				5733DE1C2818369D00287B39 /* PhoneCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5733DE172818349200287B39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5733DE18281834AE00287B39 /* Contact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +305,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5733DDFF2818235000287B39 /* MenuView.swift in Sources */,
+				5733DE0E281827B200287B39 /* ContactView.swift in Sources */,
 				5733DDDF28181C6900287B39 /* MenuController.swift in Sources */,
+				5733DE022818241A00287B39 /* StringExtension.swift in Sources */,
+				5733DE1328182D7900287B39 /* NameCell.swift in Sources */,
 				5733DDEF28181F7900287B39 /* BaseController.swift in Sources */,
+				5733DE042818244C00287B39 /* String+Localized.swift in Sources */,
+				5733DE212818373100287B39 /* AddressCell.swift in Sources */,
 				5733DDDB28181C6900287B39 /* AppDelegate.swift in Sources */,
+				5733DE0C281827A800287B39 /* ContactController.swift in Sources */,
+				5733DE1D2818369D00287B39 /* PhoneCell.swift in Sources */,
+				5733DE10281829B500287B39 /* BaseInputView.swift in Sources */,
+				5733DE0A2818269F00287B39 /* ContactsView.swift in Sources */,
+				5733DE082818267100287B39 /* ContactsController.swift in Sources */,
+				5733DE19281834AE00287B39 /* Contact.swift in Sources */,
+				5733DE232818379200287B39 /* NotesCell.swift in Sources */,
+				5733DDF12818216C00287B39 /* BaseView.swift in Sources */,
+				5733DE1B2818351300287B39 /* CoreDataManager.swift in Sources */,
+				5733DE1F281836EB00287B39 /* EmailCell.swift in Sources */,
+				5733DE16281833F500287B39 /* ContactBook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactBook/Info.plist;
+				INFOPLIST_FILE = "ContactBook/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -303,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactBook/Info.plist;
+				INFOPLIST_FILE = "ContactBook/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -344,6 +532,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5733DE14281833F500287B39 /* ContactBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5733DE15281833F500287B39 /* ContactBook.xcdatamodel */,
+			);
+			currentVersion = 5733DE15281833F500287B39 /* ContactBook.xcdatamodel */;
+			path = ContactBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5733DDCF28181C6900287B39 /* Project object */;
 }
