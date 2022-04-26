@@ -12,6 +12,7 @@ class ContactController: BaseController {
     // MARK: - Internal properties
     
     var contact: Contact?
+    var saveContact = false
     
     // MARK: - Private properties
     
@@ -28,11 +29,18 @@ class ContactController: BaseController {
         setupContact()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        deleteTemporaryContact()
+    }
+    
     @objc private func handleBarButton(barButton: UIBarButtonItem) {
         guard let emptyName = contact?.name?.isBlank, let emptyPhone = contact?.phone.isBlank, let emptyEmail = contact?.email.isBlank, !emptyName, !emptyPhone, !emptyEmail else {
             showAlert(message: .pleaseFillAllGeneralFields, acceptText: .accept)
             return
         }
+        
+        saveContact = true
         
         if let contact = contact {
             Contact.createContact(contact)
@@ -42,6 +50,16 @@ class ContactController: BaseController {
     }
     
     // MARK: - Private functions
+    
+    private func deleteTemporaryContact() {
+        if !saveContact {
+            guard let contact = contact else {
+                return
+            }
+            
+            Contact.deleteContact(contact)
+        }
+    }
     
     private func setupContact() {
         if contact == nil {
@@ -60,6 +78,7 @@ class ContactController: BaseController {
     }
     
     private func setupNavigationBarTitle() {
+        navigationItem.hidesBackButton = contact != nil
         navigationItem.title = contact == nil ? .addContact : .editContact
     }
 }

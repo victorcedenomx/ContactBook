@@ -21,4 +21,10 @@ struct Constants {
     struct Screen {
         static var width: CGFloat { return UIScreen.main.bounds.width }
     }
+    
+    struct TableView {
+        struct Header {
+            static let id = "Header"
+        }
+    }
 }

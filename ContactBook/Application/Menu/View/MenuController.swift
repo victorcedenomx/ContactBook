@@ -24,9 +24,11 @@ class MenuController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         setupNavigationBar()
+        setupView()
     }
+    
+    // MARK: - Private handlers
     
     @objc private func handleBarButton(barButton: UIBarButtonItem) {
         navigationController?.pushViewController(ContactController(), animated: true)

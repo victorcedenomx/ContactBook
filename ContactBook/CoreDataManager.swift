@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 open class CoreDataManager {
     
@@ -30,15 +31,13 @@ open class CoreDataManager {
         return container
     }()
     
-    func saveContext(_ context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) -> Bool {
-        guard context.hasChanges else { return true }
+    func saveContext(_ context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) {
+        guard context.hasChanges else { return }
         
         do {
             try context.save()
-            return true
         } catch let error {
             print("Error:", error)
-            return false
         }
     }
 }

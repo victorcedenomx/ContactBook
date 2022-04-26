@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContactsViewDelegate {
+    func didSelectContact(_ contact: Contact)
+}
+
 class ContactsView: BaseView {
     
     // MARK: - Internal functions
@@ -36,8 +40,14 @@ class ContactsView: BaseView {
         return cv
     }()
     
+    private var delegate: ContactsViewDelegate?
+    
     // MARK: - Initializers
     
+    convenience init(frame: CGRect, delegate: ContactsViewDelegate?) {
+        self.init(frame: frame)
+        self.delegate = delegate
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +93,8 @@ extension ContactsView: UICollectionViewDataSource {
 
 extension ContactsView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select item at indexPath: \(indexPath)")
+        let contact = contacts[indexPath.item]
+        delegate?.didSelectContact(contact)
     }
 }
 

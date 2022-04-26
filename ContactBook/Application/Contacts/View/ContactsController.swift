@@ -11,7 +11,7 @@ class ContactsController: BaseController {
     
     // MARK: - Private properties
     
-    private lazy var contactsView = ContactsView(frame: view.frame)
+    private lazy var contactsView = ContactsView(frame: view.frame, delegate: self)
     
     // MARK: - Overrides
     
@@ -29,6 +29,10 @@ class ContactsController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupContacts()
     }
     
@@ -40,5 +44,15 @@ class ContactsController: BaseController {
     
     private func setupView() {
         view.addSubview(contactsView)
+    }
+}
+
+// MARK: - ContactsViewDelegate
+
+extension ContactsController: ContactsViewDelegate {
+    func didSelectContact(_ contact: Contact) {
+        let contactDetailsController = ContactDetailsController()
+        contactDetailsController.contact = contact
+        navigationController?.pushViewController(contactDetailsController, animated: true)
     }
 }

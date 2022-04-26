@@ -12,12 +12,8 @@ class Contact: NSManagedObject {
 }
 
 extension Contact {
-    static func createContact(_ contact: Contact, context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) -> Bool {
-        guard !someEntityExists(contact: contact) else { return false }
-        
-        // Save the event on disk
-        
-        return CoreDataManager.sharedInstance.saveContext(context)
+    static func createContact(_ contact: Contact, context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) {
+        CoreDataManager.sharedInstance.saveContext(context)
     }
     
     static func getAllContacts(context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) -> [Contact] {
@@ -25,7 +21,6 @@ extension Contact {
         
         do {
             let contacts = try context.fetch(fetchRequest)
-            print("Contacts: \(contacts.count)")
             return contacts
         } catch let error {
             print("Error:", error)
@@ -34,19 +29,29 @@ extension Contact {
         return []
     }
     
-    static private func someEntityExists(contact: Contact, context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Contact")
-        fetchRequest.predicate = NSPredicate(format: "id == %d", contact.id)
-        fetchRequest.includesSubentities = false
+    static func deleteContact(_ contact: Contact, context: NSManagedObjectContext = CoreDataManager.sharedInstance.context) {
+        context.delete(contact)
         
-        var entitiesCount = 0
-
+        CoreDataManager.sharedInstance.saveContext(context)
+    }
+    
+    static func getContact(withId id: Int64) -> Contact? {
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+        let idPredicate = NSPredicate(format: "id == %ld", id)
+        let predicates: [NSPredicate] = [idPredicate]
+        
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        
         do {
-            entitiesCount = try context.count(for: fetchRequest)
-        } catch {
+            let contacts = try CoreDataManager.sharedInstance.context.fetch(fetchRequest)
+            
+            if contacts.count == 1 {
+                return contacts.first
+            }
+        } catch let error {
             print("Error:", error)
         }
-
-        return entitiesCount > 0
+        
+        return nil
     }
 }

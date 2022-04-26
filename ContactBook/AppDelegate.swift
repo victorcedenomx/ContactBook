@@ -5,6 +5,7 @@
 //  Created by Víctor Cedeño on 26/04/22.
 //
 
+import CoreData
 import UIKit
 
 @main
@@ -30,5 +31,10 @@ extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupWindow()
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Save changes in the application's managed object context when the application transitions to the background.
+        CoreDataManager.sharedInstance.saveContext()
     }
 }
