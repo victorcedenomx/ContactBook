@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol PhoneCellDelegate {
+    func didUpdatePhone(text: String)
+}
+
 class PhoneCell: UITableViewCell {
+    
+    // MARK: - Internal properties
+    
+    var delegate: PhoneCellDelegate?
     
     // MARK: - Private properties
     
-    private lazy var phoneInputView: BaseInputView = {
+    lazy var phoneInputView: BaseInputView = {
         let view = BaseInputView()
+        view.textField.addTarget(self, action: #selector(handleTextField), for: .editingChanged)
         view.textField.autocapitalizationType = .none
         view.textField.clearButtonMode = .whileEditing
         view.textField.keyboardType = .phonePad
@@ -30,6 +39,12 @@ class PhoneCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private handlers
+    
+    @objc private func handleTextField(textField: UITextField) {
+        delegate?.didUpdatePhone(text: textField.trimmedText)
     }
     
     // MARK: - Private functions

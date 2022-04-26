@@ -9,6 +9,10 @@ import UIKit
 
 class ContactView: BaseView {
     
+    // MARK: - Internal properties
+    
+    var contact: Contact?
+    
     // MARK: - Private properties
     
     private lazy var contactTableView: UITableView = {
@@ -45,6 +49,58 @@ class ContactView: BaseView {
     }
 }
 
+// MARK: - AddressCellDelegate
+
+extension ContactView: AddressCellDelegate {
+    func didUpdateAddressLine1(text: String) {
+        contact?.addressLine1 = text
+    }
+    
+    func didUpdateZipCode(text: String) {
+        contact?.zipCode = text
+    }
+    
+    func didUpdateCity(text: String) {
+        contact?.city = text
+    }
+    
+    func didUpdateState(text: String) {
+        contact?.state = text
+    }
+}
+
+// MARK: - EmailCellDelegate
+
+extension ContactView: EmailCellDelegate {
+    func didUpdateEmail(text: String) {
+        contact?.email = text
+    }
+}
+
+// MARK: - NameCellDelegate
+
+extension ContactView: NameCellDelegate {
+    func didUpdateName(text: String) {
+        contact?.name = text
+    }
+}
+
+// MARK: - NotesCellDelegate
+
+extension ContactView: NotesCellDelegate {
+    func didUpdateNotes(text: String) {
+        contact?.notes = text
+    }
+}
+
+// MARK: - PhoneCellDelegate
+
+extension ContactView: PhoneCellDelegate {
+    func didUpdatePhone(text: String) {
+        contact?.phone = text
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension ContactView: UITableViewDataSource {
@@ -63,19 +119,29 @@ extension ContactView: UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 let cell = NameCell()
+                cell.delegate = self
+                cell.nameInputView.textField.text = contact?.name
                 return cell
             case 1:
                 let cell = PhoneCell()
+                cell.delegate = self
+                cell.phoneInputView.textField.text = contact?.phone
                 return cell
             default:
                 let cell = EmailCell()
+                cell.delegate = self
+                cell.emailInputView.textField.text = contact?.email
                 return cell
             }
         case 1:
             let cell = AddressCell()
+            cell.delegate = self
+            cell.addressLine1InputView.textField.text = contact?.addressLine1
             return cell
         default:
             let cell = NotesCell()
+            cell.delegate = self
+            cell.notesTextView.text = contact?.notes
             return cell
         }
     }
@@ -100,6 +166,13 @@ extension ContactView: UITableViewDataSource {
 
 extension ContactView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 2 ? 100 : 60
+        switch indexPath.section {
+        case 0:
+            return 60
+        case 1:
+            return 240
+        default:
+            return 100
+        }
     }
 }

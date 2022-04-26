@@ -24,7 +24,9 @@ extension Contact {
         let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
         
         do {
-            return try context.fetch(fetchRequest)
+            let contacts = try context.fetch(fetchRequest)
+            print("Contacts: \(contacts.count)")
+            return contacts
         } catch let error {
             print("Error:", error)
         }

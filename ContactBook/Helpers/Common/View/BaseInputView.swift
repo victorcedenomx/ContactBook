@@ -30,7 +30,7 @@ class BaseInputView: UIView {
     private let titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.baselineAdjustment = .alignCenters
-        lbl.font = .systemFont(ofSize: 16, weight: .regular)
+        lbl.font = .systemFont(ofSize: 14, weight: .light)
         lbl.textAlignment = .left
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl

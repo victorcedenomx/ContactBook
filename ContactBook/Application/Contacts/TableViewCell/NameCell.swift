@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol NameCellDelegate {
+    func didUpdateName(text: String)
+}
+
 class NameCell: UITableViewCell {
+    
+    // MARK: - Internal properties
+    
+    var delegate: NameCellDelegate?
     
     // MARK: - Private properties
     
-    private lazy var nameInputView: BaseInputView = {
+    lazy var nameInputView: BaseInputView = {
         let view = BaseInputView()
+        view.textField.addTarget(self, action: #selector(handleTextField), for: .editingChanged)
         view.textField.autocapitalizationType = .words
         view.textField.clearButtonMode = .whileEditing
         view.textField.returnKeyType = .next
@@ -29,6 +38,12 @@ class NameCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private handlers
+    
+    @objc private func handleTextField(textField: UITextField) {
+        delegate?.didUpdateName(text: textField.trimmedText)
     }
     
     // MARK: - Private functions
